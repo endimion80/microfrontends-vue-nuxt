@@ -1,0 +1,27 @@
+version: '3'
+services:
+  user-management:
+    build: ./user-management
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./user-management:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  product-dashboard:
+    build: ./product-dashboard
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./product-dashboard:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
