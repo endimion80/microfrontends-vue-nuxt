@@ -25,3 +25,4 @@ services:
     volumes:
       - ./backend:/usr/src/app
     environment:
+      - NODE_ENV=development

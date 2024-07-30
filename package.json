@@ -1,0 +1,21 @@
+{
+  "name": "microfrontends",
+  "version": "1.0.0",
+  "description": "microfrontends",
+  "main": "index.js",
+  "scripts": {
+    "install-backend-deps": "cd backend && npm install",
+    "install-product-dashboard-deps": "cd product-dashboard && npm install",
+    "install-user-management-deps": "cd user-management && npm install",
+    "install-deps": "npm install && concurrently \"npm run install-backend-deps\" \"npm run install-product-dashboard-deps\" \"npm run install-user-management-deps\"",
+    "backend": "cd backend && npm start",
+    "product-dashboard": "cd product-dashboard && npm run dev",
+    "user-management": "cd user-management && npm run dev",
+    "run": "concurrently \"npm run backend\" \"npm run product-dashboard\" \"npm run user-management\""
+  },
+  "keywords": [],
+  "author": "Joan",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

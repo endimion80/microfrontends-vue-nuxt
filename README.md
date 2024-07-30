@@ -45,7 +45,7 @@ git clone https://github.com/tu-usuario/microfrontends-vue-nuxt.git
 cd microfrontends-vue-nuxt
 
 2.Construir y Levantar los Contenedores:
-docker-compose up --build
+docker compose up --build
 
 3. Acceder a las Aplicaciones:
  • user-management: http://localhost:3001
